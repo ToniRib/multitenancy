@@ -7,7 +7,6 @@ class Stores::ItemsController < Stores::StoresController
 
   def show
     @item = @store.items.find_by(id: params[:id])
-
     redirect_to store_items_path(store: @store.url) if @item.nil?
   end
 
